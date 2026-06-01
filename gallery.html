@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- Declares the document as HTML5 -->
+<html lang="en">
+<head>
+  <!-- Character encoding for proper text display -->
+  <meta charset="UTF-8" />
+  <!-- Makes the page responsive on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Page title shown in the browser tab -->
+  <title>The Wandering Baker</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #1a0800, #0d0400); /* Dark espresso gradient */
+      font-family: Arial, sans-serif;
+      max-width: 500px;
+      margin: 0 auto;
+      padding-bottom: 30px;
+    }
+
+    /* Header Swirl Section */
+    .swirl {
+      text-align: center;
+      padding: 24px 0 10px;
+    }
+
+    .swirl svg {
+      width: 260px;
+      height: 50px;
+    }
+
+    /* Site title below swirl */
+    .site-title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 900;
+      color: #f5c842; /* Golden yellow */
+      letter-spacing: 2px;
+      padding: 4px 0 12px;
+      font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    /* Cart Bar */
+    .cart-bar {
+      text-align: right;
+      padding: 8px 20px;
+    }
+
+    .cart-bar span {
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* Photo Card */
+    .photo-card {
+      background: linear-gradient(135deg, #1c0900, #2e1200); /* Dark chocolate gradient */
+      margin: 18px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+      border: 1px solid #d4820a; /* Orange-gold border */
+      transition: transform 0.3s ease;
+    }
+
+    .photo-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Caption */
+    .photo-card .caption {
+      background-color: #1c0900;
+      color: #f0dfc8; /* Cream text */
+      font-weight: bold;
+      font-size: 14px;
+      padding: 12px 14px;
+      line-height: 1.5;
+      border-top: 2px solid #d4820a;
+    }
+
+    /* Add to Basket Button */
+    .photo-card .add-btn {
+      background-color: #d4820a; /* Burnt orange */
+      color: #0d0400; /* Dark text for contrast */
+      border: none;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 8px 16px;
+      margin: 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .photo-card .add-btn:hover {
+      background-color: #f5c842; /* Gold on hover */
+      color: #0d0400;
+    }
+
+    /* Focus ring for keyboard navigation — accessibility */
+    .photo-card .add-btn:focus {
+      outline: 3px solid #f5c842;
+      outline-offset: 2px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 24px;
+      padding: 16px;
+      text-align: center;
+      background: linear-gradient(135deg, #1c0900, #3d1400);
+      color: #f5c842;
+      border-radius: 14px 14px 0 0;
+      border-top: 3px solid #d4820a;
+    }
+
+    footer .copyright {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    footer ul li a {
+      color: #f0dfc8;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    footer ul li a:hover {
+      text-decoration: underline;
+      color: #f5c842;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Swirl Section with decorative SVG -->
+  <div class="swirl">
+    <svg viewBox="0 0 260 50" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-label="Decorative wave divider">
+      <path d="M10 25 Q30 5 50 25 Q70 45 90 25 Q110 5 130 25 Q150 45 170 25 Q190 5 210 25 Q230 45 250 25"
+        stroke="#d4820a" stroke-width="2.5" fill="none"/>
+      <circle cx="130" cy="35" r="4" fill="#f5c842"/>
+      <circle cx="10"  cy="25" r="3" fill="#f5c842"/>
+      <circle cx="250" cy="25" r="3" fill="#f5c842"/>
+    </svg>
+  </div>
+
+  <!-- Site title for branding -->
+  <div class="site-title">The Wandering Baker</div>
+
+  <!-- Cart Bar with accessible label -->
+  <div class="cart-bar">
+    <!-- aria-label provides a text description for screen readers -->
+    <span role="button" aria-label="View shopping basket" tabindex="0">🛒</span>
+  </div>
+
+  <!--
+    ACCESSIBILITY NOTES:
+    - Every img has a descriptive alt attribute for screen readers
+    - Buttons have specific aria-label values so users know exactly what they're adding
+    - Colour contrast meets WCAG AA guidelines (light text on dark background)
+    - Semantic HTML used throughout: main, article, footer, nav
+    - Interactive elements are keyboard focusable (tabindex, :focus styles)
+    - The SVG has role="img" and aria-label so it is described to screen readers
+  -->
+
+  <!-- Main content area -->
+  <main>
+
+    <!--
+      Card 1 — Chocolate Chip Cookies
+      Image source: Unsplash
+      Link: https://images.unsplash.com/photo-1499636136210-6f4ee915583e
+    -->
+    <article class="photo-card">
+      <img
+        src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=700&q=80"
+        alt="Freshly baked chocolate chip cookies arranged on a wire cooling rack"
+      />
+      <div class="caption">
+        These were the very first batch I baked at 5am on a crisp January morning.
+        The whole house smelled incredible — even the dog was interested!
+      </div>
+      <button class="add-btn" aria-label="Add Chocolate Chip Cookies print to basket">Add to basket</button>
+    </article>
+
+    <!--
+      Card 2 — Triple Fudge Brownies
+      Image source: Unsplash
+      Link: https://images.unsplash.com/photo-1549931319-a545dcf3bc7b
+    -->
+    <article class="photo-card">
+      <img
+        src="https://images.unsplash.com/photo-1564355808539-22fda35bed7e?auto=format&fit=crop&w=700&q=80"
+        alt="Stack of three fudgy chocolate brownies with a crinkled sugar top"
+      />
+      <div class="caption">
+        These triple-fudge brownies almost didn't make it to the photoshoot.
+        Worth every calorie — I promise.
+      </div>
+      <button class="add-btn" aria-label="Add Triple Fudge Brownies print to basket">Add to basket</button>
+    </article>
+
+    <!--
+      Card 3 — Chocolate Layer Cake
+      Image source: Unsplash
+      Link: https://images.unsplash.com/photo-1486427944299-d1955d23e34d
+    -->
+    <article class="photo-card">
+      <img
+        src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=700&q=80"
+        alt="Slice of rich dark chocolate layer cake with thick ganache frosting on a white plate"
+      />
+      <div class="caption">
+        My gran's chocolate cake recipe, updated for 2026. Five layers,
+        dark ganache, and a pinch of espresso powder. Legendary.
+      </div>
+      <button class="add-btn" aria-label="Add Gran's Chocolate Cake print to basket">Add to basket</button>
+    </article>
+
+    <!--
+      Card 4 — Hot Chocolate
+      Image source: Unsplash
+      Link: https://images.unsplash.com/photo-1606313564200-e75d5e30476c
+    -->
+    <article class="photo-card">
+      <img
+        src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=80"
+        alt="Mug of thick Belgian hot chocolate topped with whipped cream and chocolate shavings"
+      />
+      <div class="caption">
+        Not a bake, but a brew! Belgian hot chocolate on a rainy November afternoon.
+        Thick enough to stand a spoon in — just how it should be.
+      </div>
+      <button class="add-btn" aria-label="Add Hot Chocolate print to basket">Add to basket</button>
+    </article>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p class="copyright">Copyright The Wandering Baker 2026.</p>
+    <!-- nav landmark helps screen reader users jump straight to navigation -->
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About me</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>

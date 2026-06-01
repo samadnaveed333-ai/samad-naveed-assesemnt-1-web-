@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cocoa & Co. Gallery</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #0d0500; /* Deep espresso background */
+      font-family: 'Trebuchet MS', sans-serif;
+      color: #f0dfc8;
+    }
+
+    header {
+      text-align: center;
+      padding: 36px 20px 6px;
+      background: linear-gradient(180deg, #1c0900 0%, #0d0500 100%);
+    }
+
+    header h1 {
+      font-size: 68px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      color: #f5c842; /* Golden yellow */
+      text-shadow: 0 3px 14px rgba(0,0,0,0.7);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      padding: 16px 0 24px;
+      background-color: #0d0500;
+    }
+
+    nav a {
+      color: #d4820a; /* Burnt orange links */
+      text-decoration: underline;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    nav a:hover { color: #f5c842; }
+
+    /* Intro section */
+    .intro {
+      padding: 10px 24px 24px;
+      max-width: 900px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .intro .float-img {
+      float: right;
+      margin: 0 0 12px 22px;
+      width: 380px;
+      height: 370px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid #d4820a; /* Orange accent border */
+    }
+
+    .intro p {
+      font-size: 15.5px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      font-family: Arial, sans-serif;
+      color: #f0dfc8;
+    }
+
+    /* Gallery grid */
+    .gallery-grid {
+      width: 100%;
+      margin-top: 14px;
+    }
+
+    .row {
+      display: flex;
+      width: 100%;
+    }
+
+    .row .cell {
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .row .cell img,
+    .row .cell video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease; /* Subtle zoom on hover */
+    }
+
+    .row .cell img:hover,
+    .row .cell video:hover {
+      transform: scale(1.03);
+    }
+
+    /* Row 1: Video + Photo */
+    .row1 .cell-video { width: 60%; height: 250px; }
+    .row1 .cell-photo { width: 40%; height: 250px; }
+
+    /* Row 2: Three Equal */
+    .row2 .cell { width: 33.333%; height: 235px; }
+
+    /* Row 3: Wide + Narrow */
+    .row3 .cell-wide   { width: 62%; height: 235px; }
+    .row3 .cell-narrow { width: 38%; height: 235px; }
+
+    /* Thin gold divider between rows */
+    .row { border-bottom: 2px solid #d4820a; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Website Header -->
+  <header>
+    <h1>Cocoa & Co.</h1>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Gallery</a>
+  </nav>
+
+  <!-- Intro Section -->
+  <div class="intro">
+    <!--
+      Floating intro image — chocolate chip cookies on a rack
+      Source: Unsplash
+      Link: https://images.unsplash.com/photo-1499636136210-6f4ee915583e
+    -->
+    <img
+      class="float-img"
+      src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80"
+      alt="Warm chocolate chip cookies arranged on a wire cooling rack"
+    />
+    <p>
+      Welcome to the Cocoa & Co. Gallery — a visual celebration of everything we bake,
+      create, and love. Here you'll find behind-the-scenes glimpses of our kitchen,
+      the chocolatey creations that come out of our ovens every morning, and the smiling
+      faces who make it all possible. Every image tells a story of craft, warmth, and just
+      the right amount of butter.
+    </p>
+    <p>
+      Our gallery is a living album, updated with every new seasonal recipe, special event,
+      and baking experiment that happens in our kitchen. Whether it's the first tray of
+      cookies out of the oven at 6am, the glossy ganache poured over a fresh brownie,
+      or the perfectly caramelised top of a salted caramel blondie — every photo is shot
+      with care and a genuine love for what we do.
+    </p>
+    <p>
+      As you scroll through, you'll notice the textures, colours, and details that define
+      the Cocoa & Co. experience. Grab a coffee, take a look, and let the bakes do the talking.
+    </p>
+  </div>
+
+  <!-- Gallery Grid -->
+  <div class="gallery-grid">
+
+    <!-- Row 1: Video + Image -->
+    <div class="row row1">
+
+      <!--
+        VIDEO — save this file as: bakery-video.mp4
+        Download link: https://www.pexels.com/video/6287545/
+        Steps: click Free Download > HD > rename to bakery-video.mp4 > put in this folder
+      -->
+      <div class="cell cell-video">
+        <video controls>
+          <source src="bakery-video.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <!--
+        IMAGE — save this file as: ingredients on counter.jpg
+        You already have this file in your folder ✅
+      -->
+      <div class="cell cell-photo">
+        <img
+          src="ingredients on counter.jpg"
+          alt="Chocolate chip cookies piled in a bowl on a dark surface"
+        />
+      </div>
+
+    </div>
+
+    <!-- Row 2: Three Equal Images -->
+    <div class="row row2">
+
+      <!--
+        IMAGE — save this file as: Brownies on a cooling rack.jpg
+        You already have this file in your folder ✅
+      -->
+      <div class="cell">
+        <img src="Brownies on a cooling rack.jpg" alt="Stacked fudgy chocolate brownies with crinkled tops" />
+      </div>
+
+      <!--
+        IMAGE — save this file as: chocolate ganache.jpg
+        You already have this file in your folder ✅
+      -->
+      <div class="cell">
+        <img src="chocolate ganache.jpg" alt="Slice of rich dark chocolate layer cake with ganache frosting" />
+      </div>
+
+      <!--
+        IMAGE — save this file as: cookies cooling on rack.jpg
+        You already have this file in your folder ✅
+      -->
+      <div class="cell">
+        <img src="cookies cooling on rack.jpg" alt="Fresh golden cookies cooling on a wire rack" />
+      </div>
+
+    </div>
+
+    <!-- Row 3: Wide + Narrow -->
+    <div class="row row3">
+
+      <!--
+        IMAGE — save this file as: baked goods spread.jpg
+        You already have this file in your folder ✅
+      -->
+      <div class="cell cell-wide">
+        <img src="baked goods spread.jpg" alt="Wide spread of cakes pastries and baked goods on a table" />
+      </div>
+
+      <!--
+        IMAGE — save this file as: cookies on rack.jpg
+        You already have this file in your folder ✅
+      -->
+      <div class="cell cell-narrow">
+        <img src="cookies on rack.jpg" alt="Fresh cookies arranged on a wire rack" />
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

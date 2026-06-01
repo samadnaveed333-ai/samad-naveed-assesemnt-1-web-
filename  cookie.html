@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!-- Declares the document type and version of HTML (HTML5) -->
+<html lang="en">
+<head>
+  <!-- Character encoding for proper text display -->
+  <meta charset="UTF-8">
+  <!-- Makes the page responsive on different screen sizes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title shown in the browser tab -->
+  <title>Classic Chocolate Chip Cookies Recipe</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Trebuchet MS', sans-serif;
+      margin: 0;
+      line-height: 1.7;
+      background-color: #1a0a00; /* Very dark espresso background */
+      color: #f5e6d3; /* Warm cream text */
+    }
+
+    /* Hero banner image at the top */
+    .hero {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 5px solid #d4820a;
+    }
+
+    /* Wrapper for all page content below hero */
+    .page-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 30px 24px 50px;
+    }
+
+    header {
+      text-align: center;
+      padding: 28px 20px 18px;
+      background: linear-gradient(135deg, #3d1400, #6b2c00);
+      border-radius: 12px;
+      margin-bottom: 28px;
+      border: 2px solid #d4820a;
+    }
+
+    header h1 {
+      font-size: 40px;
+      color: #f5c842; /* Golden yellow */
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    header p {
+      color: #f5e6d3;
+      font-size: 15px;
+      margin-top: 6px;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #f5c842;
+      border-bottom: 2px solid #d4820a;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      font-size: 18px;
+      color: #f5c842;
+      margin-bottom: 8px;
+    }
+
+    p { margin-bottom: 14px; }
+
+    section {
+      margin-bottom: 26px;
+      padding: 22px;
+      border: 1px solid #5a2e00;
+      border-radius: 10px;
+      background-color: #2a0f00; /* Dark chocolate panel */
+    }
+
+    /* Section image */
+    .section-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    aside {
+      background-color: #3d1c00;
+      border-left: 5px solid #f5c842;
+      padding: 12px 16px;
+      margin-top: 14px;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #f5e6d3;
+    }
+
+    ul, ol {
+      margin-left: 22px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+
+    th, td {
+      border: 1px solid #5a2e00;
+      padding: 9px 14px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #6b2c00;
+      color: #f5c842;
+    }
+
+    tr:nth-child(even) {
+      background-color: #3d1400;
+    }
+
+    footer {
+      text-align: center;
+      padding: 14px;
+      background: linear-gradient(135deg, #3d1400, #6b2c00);
+      border-radius: 12px;
+      margin-top: 10px;
+      color: #f5c842;
+      font-weight: bold;
+      border: 2px solid #d4820a;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Full-width hero image of cookies -->
+  <!-- Image source: Unsplash – chocolate chip cookies on a tray -->
+  <!-- Link: https://images.unsplash.com/photo-1499636136210-6f4ee915583e -->
+  <img
+    class="hero"
+    src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1400&q=80"
+    alt="Freshly baked chocolate chip cookies on a baking tray"
+  />
+
+  <div class="page-wrapper">
+
+    <!-- Header section with page title and tagline -->
+    <header>
+      <h1>🍪 Classic Chocolate Chip Cookies</h1>
+      <p>Soft, chewy, and loaded with chocolate — baked with love!</p>
+    </header>
+
+    <main>
+
+      <!-- About section -->
+      <section>
+        <!-- Image source: Unsplash – cookie dough being mixed -->
+        <!-- Link: https://images.unsplash.com/photo-1558961363-fa8fdf82db35 -->
+        <img
+          class="section-img"
+          src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=900&q=80"
+          alt="Cookie dough and baking ingredients laid out on a kitchen counter"
+        />
+        <h2>About This Recipe</h2>
+        <p>
+          These classic chocolate chip cookies have been perfected over generations.
+          With crispy edges, a gooey centre, and pockets of melted chocolate throughout,
+          they are the ultimate comfort bake. Whether you're making them for a bake sale,
+          a rainy afternoon, or simply because you deserve a treat — this recipe never fails.
+        </p>
+        <aside>
+          <strong>🍪 Did You Know?</strong> The chocolate chip cookie was invented by accident in 1938
+          by Ruth Wakefield, who added broken chocolate bar pieces to her cookie dough expecting
+          them to melt — they didn't, and a legend was born!
+        </aside>
+      </section>
+
+      <!-- Ingredients section -->
+      <section>
+        <h2>Ingredients</h2>
+        <ul>
+          <li>2 ¼ cups all-purpose flour</li>
+          <li>1 teaspoon baking soda</li>
+          <li>1 teaspoon salt</li>
+          <li>1 cup (2 sticks) unsalted butter, softened</li>
+          <li>¾ cup granulated sugar</li>
+          <li>¾ cup packed brown sugar</li>
+          <li>2 large eggs</li>
+          <li>2 teaspoons vanilla extract</li>
+          <li>2 cups chocolate chips</li>
+          <li>Optional: ½ cup chopped walnuts</li>
+        </ul>
+      </section>
+
+      <!-- Instructions section -->
+      <section>
+        <!-- Image source: Unsplash – cookies cooling on a rack -->
+        <!-- Link: https://images.unsplash.com/photo-1607478900766-efe13248b125 -->
+        <img
+          class="section-img"
+          src="https://images.unsplash.com/photo-1607478900766-efe13248b125?auto=format&fit=crop&w=900&q=80"
+          alt="Golden cookies cooling on a wire rack fresh from the oven"
+        />
+        <h2>Instructions</h2>
+        <ol>
+          <li>Preheat your oven to 190°C (375°F) and line two baking trays with parchment paper.</li>
+          <li>In a medium bowl, whisk together flour, baking soda, and salt. Set aside.</li>
+          <li>Beat softened butter, granulated sugar, and brown sugar until light and fluffy (about 3 minutes).</li>
+          <li>Add eggs one at a time, beating well after each. Mix in the vanilla extract.</li>
+          <li>Gradually stir in the flour mixture until just combined — do not overmix.</li>
+          <li>Fold in the chocolate chips (and walnuts if using).</li>
+          <li>Drop rounded tablespoons of dough onto trays, spacing them about 5 cm apart.</li>
+          <li>Bake for 9–11 minutes until edges are golden but centres look slightly underdone.</li>
+          <li>Cool on the tray for 5 minutes before transferring to a wire rack.</li>
+          <li>Serve warm with a glass of cold milk and enjoy!</li>
+        </ol>
+      </section>
+
+      <!-- Nutrition table section -->
+      <section>
+        <h2>Nutrition Information</h2>
+        <p>Approximate values per cookie (based on a batch of 48 cookies):</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Nutrient</th>
+              <th>Amount Per Cookie</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Calories</td><td>148 kcal</td></tr>
+            <tr><td>Total Fat</td><td>7g</td></tr>
+            <tr><td>Carbohydrates</td><td>20g</td></tr>
+            <tr><td>Protein</td><td>2g</td></tr>
+            <tr><td>Sugar</td><td>12g</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Storage tips section -->
+      <section>
+        <h2>Storage Tips</h2>
+        <p>Store baked cookies in an airtight container at room temperature for up to 5 days.
+        You can also freeze the raw cookie dough balls on a tray, then transfer to a zip-lock bag
+        and freeze for up to 3 months. Bake from frozen, adding 2–3 extra minutes to the bake time.</p>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Sweet Home Bakery Recipes</p>
+    </footer>
+
+  </div>
+</body>
+</html>
